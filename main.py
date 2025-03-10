@@ -6,6 +6,11 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
+command_ls = "ls"
+command_copyfrom = "cp /home/nayapay/PayPakIssuingSimulatorUAT.jar D:/Repositories"
+command_copyto = "cp D:/Repositories/PayPakIssuingSimulatorUAT.jar /home/nayapay"
+command_runjar = "java -jar PayPakIssuingSimulatorUAT.jar"
+
 def create_ssh_connection(hostname, port, username, password):
   try:
     client = paramiko.SSHClient()
@@ -34,13 +39,13 @@ if __name__ == "__main__":
   
   # client = create_ssh_connection(hostname, port, username, password)
   # if client:
-  #   command = "ls"
-  #   output, error = execute_command(client, command)
+  #   output, error = execute_command(client, command_ls)
   #   if output:
   #     print("Output:\n", output)
   #   if error:
   #     print("Error:\n", error)
-  #   client.close()
+
+  #   output, error = execute_command(client, command_copyfrom)
 
   #assuming simulator jar is copied to local machine
 
@@ -93,3 +98,5 @@ if __name__ == "__main__":
   shutil.move(temp_jar, jar_path)
 
   print("XML inside JAR modified successfully!")
+
+  #   client.close()
