@@ -1,3 +1,5 @@
 *.jar
 *.class
 *.log
+
+venv/
