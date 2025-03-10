@@ -32,6 +32,14 @@ def execute_command(client, command):
     return None, None
 
 if __name__ == "__main__":
+
+  # Create ssh connection with server
+  # copy latest file from the server to local
+  # backup the original file
+  # modify the xml inside the jar
+  # copy the modified jar back to the server
+  # run the jar
+  
   hostname = "192.168.37.87" #nayapay@NP_UAT_WALLET
   port = 10984
   username = "nayapay"
