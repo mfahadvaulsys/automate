@@ -39,6 +39,8 @@ if __name__ == "__main__":
   # modify the xml inside the jar
   # copy the modified jar back to the server
   # run the jar
+  # get logs from the server
+  # close the connection
   
   hostname = "192.168.37.87" #nayapay@NP_UAT_WALLET
   port = 10984
